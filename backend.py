@@ -69,14 +69,18 @@ def get_onboarded():
             universal_newlines=True
         )
 
+        # Captures the output and error from the command
         result, error = curl_process.communicate()
 
+        # Checks if the command execution failed and returns an error if so
         if curl_process.returncode != 0:
-            return error_response("Failed to retrieve charts list", 500, error)
+            return jsonify({'error': error}), 500
 
-        return jsonify({'status': 'success', 'data': result}), 200
+        # Returns the result in JSON format
+        return result, 200
     except Exception as e:
-        return error_response("An unexpected error occurred", 500, str(e))
+        # Handles any other exceptions
+        return jsonify({'error': str(e)}), 500
 
 # Define a route to get deployed pods and parse their output
 @app.route('/getDeployed', methods=['GET'])
