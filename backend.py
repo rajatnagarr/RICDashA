@@ -15,6 +15,22 @@ app = Flask(__name__, static_url_path='/static', static_folder='static')
 # Enable CORS for all routes, allowing requests from any origin
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+def error_response(message, status_code, details=None):
+    """Standardized error response format."""
+    error_data = {
+        'status': 'error',
+        'message': message,
+        'code': status_code,
+    }
+    
+    if details:
+        error_data['details'] = details
+    
+    response = jsonify(error_data)
+    response.status_code = status_code
+    return response
+
+
 # Define a route for the root URL ('/')
 @app.route('/', methods=['GET'])
 def serve_frontend():
@@ -53,18 +69,14 @@ def get_onboarded():
             universal_newlines=True
         )
 
-        # Captures the output and error from the command
         result, error = curl_process.communicate()
 
-        # Checks if the command execution failed and returns an error if so
         if curl_process.returncode != 0:
-            return jsonify({'error': error}), 500
+            return error_response("Failed to retrieve charts list", 500, error)
 
-        # Returns the result in JSON format
-        return result, 200
+        return jsonify({'status': 'success', 'data': result}), 200
     except Exception as e:
-        # Handles any other exceptions
-        return jsonify({'error': str(e)}), 500
+        return error_response("An unexpected error occurred", 500, str(e))
 
 # Define a route to get deployed pods and parse their output
 @app.route('/getDeployed', methods=['GET'])
