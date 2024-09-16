@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Near-RT RIC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles/ricstyle.css">
+</head>
+
+<body>
+
+<div class="full-page-background">
+
+    <!-- Home Section -->
+    <section id="home" class="section d-flex align-items-center justify-content-center">
+        <div class="content-container">
+            <div class="formatted-text">
+                <h1>Cluster Data</h1>
+                <p>This page serves information pertaining the Kubernetes pods running within the Near-RT RIC.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OnBoarded xApps Section -->
+    <details>
+        <summary>OnBoarded xApps</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="onboarded-xapps-content"></p>
+            </div>
+        </div>
+    </details>
+
+    <!-- Deployed xApps Section -->
+    <details>
+        <summary>Deployed xApps</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="deployed-xapps-content"></p>
+            </div>
+        </div>
+    </details>
+
+    <!-- gNB Data Section -->
+    <details>
+        <summary>gNB Data</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="gnb-data-content"></p>
+            </div>
+        </div>
+    </details>
+
+    <!-- UE PRB Allocation Data Section -->
+    <details>
+        <summary>UE PRB Allocation Data</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="ue-prb-data-content"></p>
+            </div>
+        </div>
+    </details>
+
+    <!-- Kubectl ricplt pods display -->
+    <details>
+        <summary>RIC Plt</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="plat-content"></p>
+            </div>
+        </div>
+    </details>
+
+    <!-- Kubectl ricplt pods display -->
+    <details>
+        <summary>RIC xApp</summary>
+        <div class="content">
+            <div class="formatted-text">
+                <p id="xapps-content"></p>
+            </div>
+        </div>
+    </details>
+</div>
+
+<script src="static/scripts/ricscript.js"></script>
+</body>
+</html>

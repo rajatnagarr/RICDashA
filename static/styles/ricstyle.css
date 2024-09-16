@@ -1,0 +1,96 @@
+/* Set height to 100%, remove default margin and padding, set standard font size, and hide overflow (scrollbars) for body and html */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Standard font size for the page */
+}
+
+/* Styling for a full-page background */
+.full-page-background {
+    position: relative;
+    min-height: 100%; /* Ensure it covers the full page */
+}
+
+/* Before pseudo-element for adding a background image */
+.full-page-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/bg.jpg'); /* URL of the background image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-size: cover; /* Cover the entire area of the element */
+    background-attachment: fixed; /* Fix the position of the background image */
+    opacity: 0.15; /* Make the image slightly transparent */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Styling for pre-formatted text areas */
+.formatted-text {
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 16px;
+    margin-bottom: 20px; /* Margin for separation from other elements */
+    word-break: break-all; /* Break words at the end of the line */
+    text-align: justify; /* Justify the text for better readability */
+    max-width: 80%; /* Limit the width of the text block */
+    margin-left: auto; /* Center the text block horizontally */
+    margin-right: auto;
+}
+
+/* Container for content with specified width and margins */
+.content-container {
+    width: 90%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin-bottom: 10px; /* Reduce margin below the container to 10px */
+    padding: 0;
+}
+
+details {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 24px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition for smooth color change */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+details summary {
+    list-style: none;
+    font-weight: bold; /* Make the summary text bold */
+    color: #000000; /* Set the summary text color */
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details[open] summary {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white; /* Set the summary text color when the details are open */
+}
+
+.content {
+    padding: 0 18px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    max-height: 0; /* Initially hide the content */
+    transition: max-height 0.3s ease; /* Add transition for smooth expansion/collapse */
+}
+
+details[open] .content {
+    max-height: 500px; /* Expand the content when the details are open */
+}

@@ -1,0 +1,125 @@
+/* Set height to 100%, remove default margin and padding, set standard font size, and hide overflow (scrollbars) for body and html */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px; /* Standard font size for the page */
+}
+
+/* Styling headers (h1, h2) with a specific font, size, weight, and alignment */
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 48px; /* Large font size for headers */
+    font-style: normal;
+    margin: 0;
+    text-align: center; /* Center-align the headers */
+    word-wrap: break-word; /* Allow long words to wrap to the next line */
+}
+
+/* Styling h3 headers similar to h1 and h2 but with different font size and added padding */
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 36px; /* Slightly smaller font size than h1 and h2 */
+    font-style: normal;
+    margin: 0;
+    text-align: center; /* Center-align the headers */
+    word-wrap: break-word; /* Allow long words to wrap to the next line */
+    padding-bottom: 10px; /* Extra space below the header */
+}
+
+/* Styling for a full-page background */
+.full-page-background {
+    position: relative;
+    min-height: 100%; /* Ensure it covers the full page */
+}
+
+/* Before pseudo-element for adding a background image */
+.full-page-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/bg.jpg'); /* URL of the background image */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-size: cover; /* Cover the entire area of the element */
+    background-attachment: fixed; /* Fix the position of the background image */
+    opacity: 0.15; /* Make the image slightly transparent */
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Styling for sections with padding and alignment */
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0; /* Remove top and bottom padding */
+}
+
+/* Styling for pre-formatted text areas */
+.formatted-text {
+    white-space: pre-wrap; /* Preserve spaces and line breaks */
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 16px;
+    margin-bottom: 20px; /* Margin for separation from other elements */
+    word-break: break-all; /* Break words at the end of the line */
+    text-align: justify; /* Justify the text for better readability */
+    max-width: 80%; /* Limit the width of the text block */
+    margin-left: auto; /* Center the text block horizontally */
+    margin-right: auto;
+}
+
+/* Container for content with specified width and margins */
+.content-container {
+    width: 90%;
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin-bottom: 10px; /* Reduce margin below the container to 10px */
+    padding: 0;
+}
+
+/* Styling for wide buttons */
+.button-wide {
+    width: 50%; /* Set button width to half of the page */
+    text-align: left; /* Align text to the left within the button */
+    padding: 10px; /* Add padding to the buttons for spacing */
+    margin: 5px 0; /* Margin between buttons */
+    font-size: 24px; /* Font size for buttons */
+}
+
+/* Styling for the buttons container */
+.button-container {
+    display: flex;
+    justify-content: space-around; /* Distribute buttons evenly horizontally */
+    align-items: center; /* Center align items vertically */
+}
+
+/* Styling for the button boxes */
+.button-box {
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    border: 2px solid black; /* Black border */
+    padding: 100px; /* Padding inside the boxes */
+    margin: 10px; /* Margin around the boxes */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styling for the button text */
+.button-text {
+    font-size: 24px; /* Font size for button text */
+    color: rgb(0, 0, 0); /* Text color */
+    text-align: center; /* Center-align the text */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Hover effect for the button boxes */
+.button-box:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Darker semi-transparent background on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
