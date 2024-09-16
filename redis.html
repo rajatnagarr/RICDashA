@@ -3,27 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Near-RT RIC</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <title>Redis Data - Near-RT RIC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/styles/redisstyle.css">
 </head>
 <body>
 
-<div class="full-page-background">
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Near-RT RIC Dashboard</a>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section d-flex align-items-center justify-content-center">
-        <div class="content-container">
-            <div class ="formatted-text">
-                <h1>Redis Database/Shared Data Layer</h1>
-                <p>This page serves information pertaining the all of the data contained within the Near-RT RIC's Redis database, which stores various kinds of information and acts as the Shared Data Layer (SDL).</p>
-            </div>
+<!-- Redis Data Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">Redis Database Information</h2>
+        <p class="text-center">This page displays data from the Near-RT RIC's Redis database, acting as the Shared Data Layer (SDL).</p>
+        <div id="redis-data" class="mt-4">
+            <!-- Content will be populated dynamically -->
         </div>
-    </section>
+    </div>
+</section>
 
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Near-RT RIC Dashboard. All Rights Reserved.</p>
+</footer>
 
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="static/scripts/redisscript.js"></script>
-
 </body>
 </html>
