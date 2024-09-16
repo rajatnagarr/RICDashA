@@ -3,40 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Near-RT RIC</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <title>Near-RT RIC Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/styles/indexstyle.css">
 </head>
 <body>
 
-<div class="full-page-background">
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Near-RT RIC Dashboard</a>
+</nav>
 
-    <!-- Home Section -->
-    <section id="home" class="section d-flex align-items-center justify-content-center">
-        <div class="content-container">
-            <div class="formatted-text">
-                <h1>Near-RT RIC Dashboard</h1>
-                <p>This dashboard serves as a portal to CCI's Near Real-Time RAN Intelligent Controller. It allows users to view intricate details of the Near Real-Time RIC, including the connected gNBs and their IDs, active policies, xApp subscriptions, and other critical information, allowing for a deeper understanding of the intricacies of ORAN Compliant 5G Networks.</p>
-            </div>
-            <!-- Buttons Container -->
-            <div class="button-container">
-                <!-- Pods Button -->
-                <div class="button-box" id="pods-button">
-                    <div class="button-text">Pods</div>
-                </div>
-
-                <!-- SDL Button -->
-                <div class="button-box" id="sdl-button">
-                    <div class="button-text">SDL</div>
-                </div>
-            </div>
+<!-- Hero Section -->
+<section class="vh-100 d-flex justify-content-center align-items-center bg-light">
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Near-RT RIC Dashboard</h1>
+        <p class="lead">Monitor, manage, and understand your 5G network infrastructure with ease.</p>
+        <div class="mt-4">
+            <a href="ric.html" class="btn btn-primary btn-lg">View Pods</a>
+            <a href="redis.html" class="btn btn-secondary btn-lg">View Redis Data</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <script src="static/scripts/indexscript.js"></script> <!-- Include the JavaScript file -->
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Near-RT RIC Dashboard. All Rights Reserved.</p>
+</footer>
 
-</div>
-
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
